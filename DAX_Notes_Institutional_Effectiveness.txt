@@ -1,0 +1,28 @@
+
+# DAX Notes – Institutional Effectiveness Project
+
+These are the key DAX formulas used in the Power BI dashboard for calculating graduation status:
+
+---
+
+-- Graduation Status within 4 Years
+Graduated_4yr = IF([Graduation Term] <= "201630", "Graduated", "Not Graduated")
+
+-- Graduation Status within 6 Years
+Graduated_6yr = IF([Graduation Term] <= "201830", "Graduated", "Not Graduated")
+
+-- Graduation Status within 8 Years
+Graduated_8yr = IF([Graduation Term] <= "202030", "Graduated", "Not Graduated")
+
+---
+
+# Additional Tips:
+- The Graduation Term is assumed to be in text format. If it's in numeric format, you can use numbers directly (e.g., 201630).
+- These calculated columns were used in bar charts and KPI cards to visually compare graduation rates.
+- Use slicers for Ethnicity and Cohort Type to create dynamic breakdowns.
+
+# Visualizations Powered by DAX:
+- Stacked Column Chart (Graduated vs Not Graduated by Ethnicity)
+- KPI Cards (Overall 4, 6, 8-Year Grad Rates)
+- Slicers for Cohort Year and Type
+
